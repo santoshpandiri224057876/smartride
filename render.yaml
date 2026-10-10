@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: smartride-backend
+    runtime: docker
+    dockerContext: ./backend
+    dockerfilePath: ./backend/Dockerfile
+    plan: free
+    region: oregon
+    envVars:
+      - key: PORT
+        value: 8080
+      - key: SPRING_DATASOURCE_URL
+        value: jdbc:mysql://mysql-5759183-santoshpandiri224057876.b.aivencloud.com:10205/defaultdb?sslMode=REQUIRED&serverTimezone=UTC
+      - key: SPRING_DATASOURCE_USERNAME
+        value: avnadmin
+      - key: SPRING_DATASOURCE_PASSWORD
+        value: AVNS_KoQfcrSHWt_GLZyyaUO
